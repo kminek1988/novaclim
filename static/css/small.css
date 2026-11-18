@@ -1,0 +1,34 @@
+@media screen and (max-width:600px) {
+    body, html {
+        overflow-x: hidden !important;
+        width: 100vw !important; /* Poprawiona wartoÅ›Ä‡ */
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+.container, 
+.container-fluid,
+.row{
+    padding:0 !important;
+}
+    
+    iframe {
+        height:50vh;
+        width:100vw;
+        background-color: var(--orange);
+
+    }
+    form, .card{
+        width:95vw;
+    }
+    .collapse{
+        background-color: var(--brand);
+        padding: 5%;
+    }
+    .navbar-toggler{
+        background-color: var(--brand)!important;
+        color: #fff;
+    }
+    .navbar-toggler-icon{
+        color: #fff!important;
+    }
+}

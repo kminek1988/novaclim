@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+ 
+  
+<div class="container-fluid">
+
+
+
+
+<!-- Button trigger modal -->
+
+
+
+
+
+
+    <div class="position-fixed z-n1 top-50">
+        <svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 64 64"
+         version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs"
+         class="grow"><path id="SvgjsPath1112" d="M4 15.51a1 1 0 0 0 .71-.29L15.22 4.71a1 1 0 1 0-1.42-1.42L3.29 13.8a1 1 0 0 0 0 1.42 1 1 0 0 0 .71.29zm0 11.38a1 1 0 0 0 .71-.29L26.6 4.71a1 1 0 1 0-1.42-1.42L3.29 25.18a1 1 0 0 0 0 1.42 1 1 0 0 0 .71.29zm0 11.36a1 1 0 0 0 .71-.25L38 4.71a1 1 0 1 0-1.42-1.42L3.29 36.54a1 1 0 0 0 0 1.42 1 1 0 0 0 .71.29zm0 11.38a1 1 0 0 0 .71-.29L49.34 4.71a1 1 0 1 0-1.42-1.42L3.29 47.92a1 1 0 0 0 0 1.42 1 1 0 0 0 .71.29zM60.71 3.29a1 1 0 0 0-1.42 0l-56 56a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l56-56a1 1 0 0 0 0-1.42zm-1.42 11.37L14.66 59.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l44.63-44.63a1 1 0 0 0-1.42-1.42zm0 11.34L26 59.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l33.29-33.25A1 1 0 0 0 59.29 26zm0 11.4L37.4 59.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l21.89-21.89a1 1 0 0 0-1.42-1.42zm0 11.38L48.78 59.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L60.71 50.2a1 1 0 0 0-1.42-1.42z" data-name="Layer 9" fill="rgba(255, 161, 1, 1)"></path></svg>
+      </div>
+
+    <div class="container py-5 first-pad">
+        <div class="row mb-4 brand-color position-relative py-5">
+           <div class="lc-block text-center py-5">
+              <div editable="rich">
+                 <h2 class="fw-bold display-1 bg-title text-center">Galerie</h2>
+              </div>
+           </div>
+    
+        </div>
+        <div class="row">
+            {% for object in object_list  %}
+           <div class="col-md-6 col-lg-4 g-4">
+              
+     
+              <div class="lc-block">
+                
+                {% if object.img %}
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#tar{{object.id}}">
+                  <img class="img-fluid" src="{{object.img.url}}" 
+                  sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="768" alt="{{object.slug}}" loading="lazy">
+          
+                </button>
+ 
+                <div class="modal fade w-100" id="tar{{object.id}}" data-bs-backdrop="fixed" 
+                data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-xl">
+                    <div class="modal-content">
+                      <div class="modal-header">
+               
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                      <img src="{{object.img.url}}" class="img-fluid" alt="">
+                      </div>
+          
+                    </div>
+                  </div>
+                </div>
+
+                 {% else %}
+                 <div class="bg-danger d-flex align-items-center justify-content-center">
+            <div class="d-block">
+                <h2>Brak zdjęcia</h2>     <br>    
+                <h3>{{object.title}}</h3>
+            </div>
+                 </div>       
+                {% endif %}
+                    
+             </div>
+             <!-- /lc-block -->
+          </div>
+              {% endfor %}
+                
+    
+        </div>
+    
+        {% include 'contact.html' %}
+        {% include 'footer.html' %}
+        <div class="position-fixed z-n1 top-0 end-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" fill="#31525b" class="grow" viewBox="0 0 200 200" version="1.1"
+            class="position-absolute z-n1 start-0"
+             xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs"><path fill="rgba(49, 82, 91, 1)" d="m100 0 1.459 91.728L134.202 6.03 104.2 92.725l60.079-69.33-57.844 71.206L186.603 50l-78.71 47.127 90.588-14.492L108.4 100l90.081 17.365-90.588-14.492L186.603 150l-80.168-44.601 57.844 71.205-60.079-69.329 30.002 86.694-32.743-85.697L100 200l-1.459-91.728-32.743 85.697L95.8 107.275l-60.079 69.329 57.844-71.205L13.398 150l78.709-47.127-90.588 14.492L91.6 100 1.52 82.635l90.587 14.492L13.397 50l80.168 44.6-57.844-71.204L95.8 92.726 65.798 6.03l32.743 85.697L100 0Z"></path></svg>     
+              
+          </div>
+     </div> 
+</div>
+  
+   
+
+    <script>
+      $('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+    </script>
+{% endblock content %}
+
+    

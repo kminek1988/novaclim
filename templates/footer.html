@@ -1,0 +1,77 @@
+{% load static %}
+
+
+
+
+<div class="container bg-tone px-5 position-relative">
+  <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+    <div class="col-lg-3 mb-3 text-center lh-lg px-5 ">
+      <img src="{{logo.img.url}}"  alt="" class="img-fluid">
+      <p class="text-brand fw-bolder">© 2023 NovaClim</p>
+    </div>
+
+
+
+    <div class="col-lg-3 mb-3">
+        <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'home' %}"
+            ><b>Strona główna</b></a
+          >
+          <!-- O firmie -->
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{about_data.get_absolute_url}}"
+            ><b>O firmie</b></a
+          >
+          <!-- O firmie -->
+        </li>
+
+
+                        
+
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'contact' %}"
+            ><b>Kontakt</b></a
+          >
+  
+        </li>
+      </ul>
+    </div>
+
+    <div class="col-lg-3 mb-3">
+
+      <ul class="nav flex-column">
+        {% for service in service_data %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{service.get_absolute_url}}"
+            ><b>{{service.name}}</b></a
+          >
+          <!-- Oferta -->
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="col-lg-3 mb-3">
+
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="{% url 'agb' %}" class="nav-link p-0 text-brand">RODO</a></li>
+        <li class="nav-item mb-2"><a href="{% url 'polityka' %}" class="nav-link p-0 text-brand">Polityka Prywatności</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-brand">NIP:{{contact_data.tax}}</a></li>
+  
+      </ul>
+    </div>
+   
+  </footer>
+  <div class="row py-2 bg-secondary w-100">
+    <div class="col-md-12 col-12 col-sm-12  text-center">
+      <h5 class="text-white"><i class="bi bi-heart-fill px-4 text-white"></i><a href="www.ecv-online.com"></a>Strona stworzona przez <img src="{% static 'img/ecv.png' %}"  width="50px" alt=""> e-Cafe Vision</a></h5>
+    </div>
+  </div>
+  <div class="row py-2 bg-secondary w-100">
+    <div class="col-md-12 col-12 col-sm-12  text-center">
+     <img src="{% static 'img/logos.jpg' %}" class="img-fluid" alt="">
+    </div>
+  </div>
+</div>

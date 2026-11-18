@@ -1,0 +1,193 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load webp_converter %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">       
+{% endblock style %}
+
+
+
+
+
+{% block title %}
+Strona główna
+{% endblock title %}
+
+
+
+
+
+{% block content %}
+
+
+<!-- hero -->
+ 
+  
+    
+<div class="d-flex container-fluid py-5"  lc-helper="background" 
+style="height:80vh;background:url({{intro.img1.url}})  center / cover no-repeat;">
+</div>
+<div class="container p-5 bg-light" style="margin-top:-100px">
+	<div class="row">
+		<div class="col-md-4 text-center align-self-center">
+			<div class="lc-block border-end border-2 ">
+				<div editable="rich">
+					
+                    {% if logo.img %}
+                    <img src="{{logo.img.url}}" class="img-fluid" alt="">
+                    {% else %}
+                    <img src="{% static 'img/logo.png' %}" alt="" class="img-fluid">
+                    {% endif %}
+                        
+				</div>
+			</div><!-- /lc-block -->
+		</div><!-- /col -->
+		<div class="col-md-8 d-flex align-items-center">
+
+				<div editable="rich" class="d-flex align-items-center" >
+					<h1>{{intro.title|safe}}</h1>
+				</div>
+	
+		</div><!-- /col -->
+	</div>
+
+</div>
+ 
+ 
+  
+     
+      
+
+
+<!-- about -->
+ 
+  
+<div class="container-fluid  py-5 my-5 about   ">
+	<div class="container py-5 bg-tone" >
+		<div class="row mb-5">
+			<div class="col-md-6 align-self-center">
+				<div class="lc-block">
+					<img class="img-fluid mx-auto d-block" src="{{about.img1.url}}" style="height:50vh">
+				</div><!-- /lc-block -->
+			</div><!-- /col -->
+			<div class="col-md-6 d-flex align-items-center">
+				<div class="lc-block">
+					<div editable="rich">
+	
+						{{about.content|safe}}
+					</div>
+				</div><!-- /lc-block -->
+			</div><!-- /col -->
+		</div>
+		<div class="row mt-4">
+			<div class="col-md-3 col-sm-6">
+				<div class="lc-block">
+					<img class="img-fluid mx-auto d-block mb-2" src="{{about.img2.url}}" style="height:22vh">
+					<div class="text-brand text-center">{{about.text1}}</div>
+				</div><!-- /lc-block -->
+	
+			</div><!-- /col -->
+			<div class="col-md-3 col-sm-6">
+				<div class="lc-block">
+					<img class="img-fluid mx-auto d-block mb-2" src="{{about.img3.url}}" style="height:22vh">
+					<div class="text-brand text-center">{{about.text2}}</div>
+				</div><!-- /lc-block -->
+	
+			</div><!-- /col -->
+			<div class="col-md-3 col-sm-6">
+				<div class="lc-block">
+					<img class="img-fluid mx-auto d-block mb-2" src="{{about.img4.url}}" style="height:22vh">
+					<div class="text-brand text-center">{{about.text3}}</div>
+				</div><!-- /lc-block -->
+	
+			</div><!-- /col -->
+			<div class="col-md-3 col-sm-6">
+				<div class="lc-block">
+					<img class="img-fluid mx-auto d-block mb-2" src="{{about.img5.url}}" style="height:22vh">
+					<div class="text-brand text-center">{{about.text4}}</div>
+				</div><!-- /lc-block -->
+	
+			</div><!-- /col -->
+		</div>
+	</div>
+</div> 
+ 
+  
+
+
+
+
+
+<!-- o mnie -->
+ 
+  
+ 
+  
+    
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 text-center">
+			<div class="lc-block">
+			
+				<h1 editable="inline" class="display-2 mb-0 "><b>Oferta</b></h1>
+			
+			</div><!-- /lc-block -->
+		</div>
+	</div>
+	<div class="row mt-4">
+
+{% for service in services %}
+<div class="col-md-4 col-lg-4 col-12 col-sm-12 my-5">
+	<div class="card">
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="card-inner d-flex justify-content-center">
+			<div class="p-lg-5 p-4 shadow d-block">
+	
+				<div class="lc-block mb-4 "><img alt="" class="img-fluid my-2"
+					src="{{service.img_home.url}}"
+					style="height:30vh">
+		
+					{{service.p_intro|safe}}
+		
+					<a class="btn btn-outline-primary" href="{{service.get_absolute_url}}" role="button">Szczegóły</a>
+				</div><!-- /lc-block -->
+			</div>
+		</div>
+	  </div>
+	  
+
+</div><!-- /col -->
+{% endfor %}
+	
+
+
+	</div>
+
+</div>
+ 
+ 
+  
+ 
+ 
+  
+ 
+ 
+  
+ 
+  
+<!-- oferta -->
+
+
+
+
+<!-- kontakt -->
+
+
+<div class="py-5">
+	{% include 'contact.html' %}
+</div>
+
+  {% include 'footer.html' %}
+{% endblock content %}
+    

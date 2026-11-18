@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% load static %}
+ 
+ {% block content %}
+ <div class="container first-pad py-5">
+{{content.impressum|safe}}
+ </div>
+   {% include 'contact.html' %} 
+   {% include 'footer.html' %}
+ {% endblock content %}
+    

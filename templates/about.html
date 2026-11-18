@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block metakeywords %}{{about.keywords}}{% endblock metakeywords %}
+    
+{% block metadescription %}{% endblock metadescription %}
+
+{% block style %}
+        <link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock style %}
+    
+{% block content %}
+<main class="flex-shrink-0">
+    <!-- Navigation-->
+
+    <!-- Header-->
+    <header class="bg-brand py-5 bg-tone">
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center justify-content-center">
+                <div class="col-lg-8 col-xl-7 col-xxl-6">
+                    <div class="my-5 text-center text-xl-start">
+                        <h1 class="display-5 fw-bolder text-white mb-2">{{about.title}}</h1>
+                        <p class="lead fw-normal text-white-50 mb-4">
+                            {{about.text1}}
+                        </p>
+     
+                    </div>
+                </div>
+                <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="{{object.img1.url}}" alt="..." />
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+    <section class="py-5" id="features">
+        <div class="container px-5 my-5">
+            <div class="row gx-5 ">
+          
+                  <div class="col-lg-6">
+                    <img src="{{about_home.img1.url}}"  class="img-thumbnail w-100" alt="">
+                  </div>
+                  <div class="col-lg-6 d-flex align-items-center">
+                    <div class="text-brand fs-3 text d-block">{{about_home.content|safe}}</div>
+                  </div>
+                
+                  
+                  </div>
+
+            </div>
+ 
+    </section>
+
+
+
+
+    <!-- Features section-->
+    <section class="py-5" id="features">
+        <div class="container px-5 my-5">
+            <div class="row gx-5 ">
+                <div class="col-lg-4 mb-5 mb-lg-0 text-center"><img src="{{logo.img.url}}"  class="img-thumbnail w-50 my-3" alt="">
+                  
+                
+                  <div class="d-block">
+                    <img src="{{about_home.img2.url}}"  class="img-thumbnail w-50" alt="">
+                  <p class="text-brand">{{about_home.text1}}</p>
+                </div>
+                  <div class="d-block">
+                    <img src="{{about_home.img3.url}}"  class="img-thumbnail w-50" alt="">
+                  <p class="text-brand">{{about_home.text2}}</p>
+                  </div>
+                  <div class="d-block">
+                    <img src="{{about_home.img4.url}}"  class="img-thumbnail w-50" alt="">
+                  <p class="text-brand">{{about_home.text3}}</p>
+                  </div>
+                  <div class="d-block">
+                    <img src="{{about_home.img5.url}}"  class="img-thumbnail w-50" alt="">
+                  <p class="text-brand">{{about_home.text4}}</p>
+                  </div>
+                  
+                  </div>
+                <div class="col-lg-8">
+                    
+                    
+        <div class="text-brand">
+            {{object.content|safe}}
+        </div>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+{% include 'contact.html' %}
+{% include 'footer.html' %}
+
+</div>
+
+
+
+{% endblock content %}
+    

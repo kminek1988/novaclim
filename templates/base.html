@@ -1,0 +1,278 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pl">
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    
+ 
+    <meta name="keywords" content="{% block metakeywords %}    {% endblock metakeywords %} ">
+    <meta name="description" content="{% block metadescription%} {% endblock metadescription %} ">
+
+    
+    <link rel="canonical" href="www.novaclim.pl">
+    <meta name="robots" content="index, follow">
+
+ 
+ {% if logo.fav %}
+ <link rel="icon" href="{{logo.fav.url}}" type="image/x-icon">
+
+ {% endif %}
+  
+    
+ {% block favicon %} {%endblock favicon%}
+
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="www.novaclim.pl" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/small.css' %}" />
+
+
+    {% block style %} {% endblock style %}
+
+    <title>Novaclim {% block title %} {% endblock title %}</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+<div class="position-fixed" style="transform: rotate(170deg) translateY(120vh); z-index: -20;">
+  <svg width="200vw" height="300vh" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><style>
+    .path-0{
+    animation:pathAnim-0 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    }
+    @keyframes pathAnim-0{
+    0%{
+    d: path("M 0,400 C 0,400 0,133 0,133 C 106.34449760765548,99.83253588516746 212.68899521531097,66.66507177033493 309,84 C 405.31100478468903,101.33492822966507 491.58851674641164,169.17224880382773 575,178 C 658.4114832535884,186.82775119617227 738.9569377990431,136.64593301435406 823,119 C 907.0430622009569,101.35406698564593 994.5837320574162,116.24401913875599 1098,124 C 1201.4162679425838,131.755980861244 1320.7081339712918,132.377990430622 1440,133 C 1440,133 1440,400 1440,400 Z");
+    }
+    25%{
+    d: path("M 0,400 C 0,400 0,133 0,133 C 88.07655502392345,130.0909090909091 176.1531100478469,127.18181818181817 269,118 C 361.8468899521531,108.81818181818183 459.46411483253587,93.36363636363636 564,96 C 668.5358851674641,98.63636363636364 779.9904306220096,119.36363636363635 889,134 C 998.0095693779904,148.63636363636365 1104.5741626794259,157.1818181818182 1196,156 C 1287.4258373205741,154.8181818181818 1363.712918660287,143.9090909090909 1440,133 C 1440,133 1440,400 1440,400 Z");
+    }
+    50%{
+    d: path("M 0,400 C 0,400 0,133 0,133 C 90.33492822966505,117.66985645933015 180.6698564593301,102.3397129186603 269,112 C 357.3301435406699,121.6602870813397 443.6555023923446,156.311004784689 548,173 C 652.3444976076554,189.688995215311 774.7081339712918,188.41626794258372 887,176 C 999.2918660287082,163.58373205741628 1101.5119617224882,140.02392344497608 1192,131 C 1282.4880382775118,121.97607655502392 1361.244019138756,127.48803827751196 1440,133 C 1440,133 1440,400 1440,400 Z");
+    }
+    75%{
+    d: path("M 0,400 C 0,400 0,133 0,133 C 105.78947368421049,113 211.57894736842098,93 306,104 C 400.421052631579,115 483.47368421052647,157 569,169 C 654.5263157894735,181 742.5263157894735,163 836,153 C 929.4736842105265,143 1028.421052631579,141 1130,139 C 1231.578947368421,137 1335.7894736842104,135 1440,133 C 1440,133 1440,400 1440,400 Z");
+    }
+    100%{
+    d: path("M 0,400 C 0,400 0,133 0,133 C 106.34449760765548,99.83253588516746 212.68899521531097,66.66507177033493 309,84 C 405.31100478468903,101.33492822966507 491.58851674641164,169.17224880382773 575,178 C 658.4114832535884,186.82775119617227 738.9569377990431,136.64593301435406 823,119 C 907.0430622009569,101.35406698564593 994.5837320574162,116.24401913875599 1098,124 C 1201.4162679425838,131.755980861244 1320.7081339712918,132.377990430622 1440,133 C 1440,133 1440,400 1440,400 Z");
+    }
+    }</style><defs><linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%"><stop offset="5%" stop-color="#5da0c5"></stop><stop offset="95%" stop-color="#8ED1FC"></stop></linearGradient></defs><path d="M 0,400 C 0,400 0,133 0,133 C 106.34449760765548,99.83253588516746 212.68899521531097,66.66507177033493 309,84 C 405.31100478468903,101.33492822966507 491.58851674641164,169.17224880382773 575,178 C 658.4114832535884,186.82775119617227 738.9569377990431,136.64593301435406 823,119 C 907.0430622009569,101.35406698564593 994.5837320574162,116.24401913875599 1098,124 C 1201.4162679425838,131.755980861244 1320.7081339712918,132.377990430622 1440,133 C 1440,133 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="0.53" class="transition-all duration-300 ease-in-out delay-150 path-0"></path><style>
+    .path-1{
+    animation:pathAnim-1 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    }
+    @keyframes pathAnim-1{
+    0%{
+    d: path("M 0,400 C 0,400 0,266 0,266 C 88.91866028708134,278.2870813397129 177.83732057416267,290.5741626794258 277,301 C 376.1626794258373,311.4258373205742 485.56937799043067,319.99043062200957 569,298 C 652.4306220095693,276.00956937799043 709.8851674641147,223.46411483253593 815,228 C 920.1148325358853,232.53588516746407 1072.8899521531102,294.1531100478469 1185,310 C 1297.1100478468898,325.8468899521531 1368.5550239234449,295.92344497607655 1440,266 C 1440,266 1440,400 1440,400 Z");
+    }
+    25%{
+    d: path("M 0,400 C 0,400 0,266 0,266 C 93.65550239234452,292.4976076555024 187.31100478468903,318.9952153110048 289,307 C 390.68899521531097,295.0047846889952 500.4114832535885,244.51674641148324 587,245 C 673.5885167464115,245.48325358851676 737.043062200957,296.9377990430622 836,297 C 934.956937799043,297.0622009569378 1069.4162679425838,245.73205741626793 1176,232 C 1282.5837320574162,218.26794258373207 1361.2918660287082,242.13397129186603 1440,266 C 1440,266 1440,400 1440,400 Z");
+    }
+    50%{
+    d: path("M 0,400 C 0,400 0,266 0,266 C 115.34928229665073,279.23444976076553 230.69856459330146,292.46889952153106 334,295 C 437.30143540669854,297.53110047846894 528.555023923445,289.3588516746412 601,284 C 673.444976076555,278.6411483253588 727.0813397129187,276.09569377990425 811,266 C 894.9186602870813,255.90430622009575 1009.1196172248804,238.25837320574163 1119,237 C 1228.8803827751196,235.74162679425837 1334.44019138756,250.87081339712918 1440,266 C 1440,266 1440,400 1440,400 Z");
+    }
+    75%{
+    d: path("M 0,400 C 0,400 0,266 0,266 C 105.56937799043064,292.0287081339713 211.13875598086128,318.0574162679426 301,311 C 390.8612440191387,303.9425837320574 465.0143540669857,263.7990430622009 562,243 C 658.9856459330143,222.20095693779908 778.8038277511962,220.74641148325364 874,230 C 969.1961722488038,239.25358851674636 1039.7703349282297,259.21531100478467 1130,267 C 1220.2296650717703,274.78468899521533 1330.1148325358852,270.39234449760767 1440,266 C 1440,266 1440,400 1440,400 Z");
+    }
+    100%{
+    d: path("M 0,400 C 0,400 0,266 0,266 C 88.91866028708134,278.2870813397129 177.83732057416267,290.5741626794258 277,301 C 376.1626794258373,311.4258373205742 485.56937799043067,319.99043062200957 569,298 C 652.4306220095693,276.00956937799043 709.8851674641147,223.46411483253593 815,228 C 920.1148325358853,232.53588516746407 1072.8899521531102,294.1531100478469 1185,310 C 1297.1100478468898,325.8468899521531 1368.5550239234449,295.92344497607655 1440,266 C 1440,266 1440,400 1440,400 Z");
+    }
+    }</style><defs><linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%"><stop offset="5%" stop-color="#5da0c5"></stop><stop offset="95%" stop-color="#8ED1FC"></stop></linearGradient></defs><path d="M 0,400 C 0,400 0,266 0,266 C 88.91866028708134,278.2870813397129 177.83732057416267,290.5741626794258 277,301 C 376.1626794258373,311.4258373205742 485.56937799043067,319.99043062200957 569,298 C 652.4306220095693,276.00956937799043 709.8851674641147,223.46411483253593 815,228 C 920.1148325358853,232.53588516746407 1072.8899521531102,294.1531100478469 1185,310 C 1297.1100478468898,325.8468899521531 1368.5550239234449,295.92344497607655 1440,266 C 1440,266 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-1"></path></svg>
+   
+    
+</div>
+
+      <nav
+        class="navbar navbar-expand-lg bg-body-transparent fixed-top container d-flex justify-content-center"
+      >
+   
+        <button
+          class="navbar-toggler "
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavbar"
+          aria-controls="collapsibleNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse"  id="collapsibleNavbar">
+  
+          <div class="row w-100">
+            <div class="row d-flex justify-content-center py-3 text-white">
+        
+      
+          
+              <div class="col-lg-4 col-12 col-sm-12 my-3">
+          
+                {% for social in social  %}
+                
+                {% if social %}
+                <a href="{{social.url}}" class="px-2"><img src="{{social.icon.url}}" alt="" width="30"></a>
+                {% else %}
+                <h1>NovaClim</h1>
+                {% endif %}
+                  
+              {% endfor %}
+
+              </div>
+              <div class="col-lg-4  offset-lg-2 d-flex align-items-center">
+                <a href="tel:{{contact_data.phone_number2}}" class="text-white"><i class="bi bi-telephone-fill px-3 text-white"></i>{{contact_data.phone_number}}</a>
+                <a href="mailto:{{contact_data.email}}" class="text-white"><i class="bi bi-envelope text-white px-3"></i>{{contact_data.email}}</a>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <ul class="navbar-nav ml-auto d-flex justify-content-center">
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'home' %}"
+                    ><b>Strona główna</b></a
+                  >
+                  <!-- O firmie -->
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{about_data.get_absolute_url}}"
+                    ><b>O firmie</b></a
+                  >
+                  <!-- O firmie -->
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Oferta
+                  </a>
+                  <ul class="dropdown-menu px-4">
+                    {% for service in service_data %}
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{service.get_absolute_url}}" 
+                        ><b>{{service.name}}</b></a
+                      >
+                      <!-- Oferta -->
+                    </li>
+                    {% endfor %}
+                  </ul>
+                </li>
+
+     
+                                
+          
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'contact' %}"
+                    ><b>Kontakt</b></a
+                  >
+          
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </nav>
+
+    <!-- navbar -->
+<div class="fade-in">
+  
+  {% block content %} {% endblock content %}
+
+</div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="{% static 'js/my.js' %}" ></script>
+<script src="{% static 'js/form.js' %}" ></script>
+
+<style>#cookiebanner_con *{box-sizing:border-box!important}
+  .cookiebanner{position:fixed;padding-bottom:5px;background-color:rgba(93, 160, 197,0.8);
+      box-shadow:0 1px 4px rgba(10,10,10,.4);z-index:1600000000;overflow:auto}
+      .cb_top .cookiebanner{top:0;left:0;width:100%;padding-bottom:5px}
+      .cb_center .cookiebanner{top:30%;left:20%;width:60%;padding:2.5% 8px}
+      .cb_bottom .cookiebanner{bottom:0;left:0;width:100%;padding-bottom:5px}
+      .cb_ecke .cookiebanner{width:640px;max-height:400px;padding:18px;overflow:auto}
+      .cookiebanner a{text-decoration:none!important}
+      .cBanner{width:100%}.cb_bottom .cBanner,.cb_top .cBanner{padding-left:4px;padding-right:4px}
+      .cBanner::after{content:"";display:table;clear:both}
+      .link_banner{color:#ffce54;text-decoration:none!important}
+      .link_banner:hover{color:#0096c8;text-decoration:underline!important}
+  .button_einverstanden{margin-bottom:8px;color:#fff!important;border-width:0;border-radius:10px}
+  .button_einverstanden:hover,.button_nein:hover{cursor:pointer;opacity:.9}
+  .button_nein{padding:1px 6px;font-size:13.3333px;background-color:#fff0!important;border-width:0}
+  .button_nein:hover{text-decoration:underline!important}
+  .co_wieder{position:fixed;padding:2px;background-color:#fff0;border:0;z-index:1500000000;display:none}
+  .co_wieder:hover{cursor:pointer}
+  .co_wieder_left_top{top:0;left:0;border-bottom-right-radius:5px}
+  .co_wieder_right_top{top:0;right:0;border-bottom-left-radius:5px}
+  .co_wieder_left_bottom{left:0;bottom:0;border-top-right-radius:5px}
+  .co_wieder_right_bottom{right:0;bottom:0;border-top-left-radius:5px}
+  .coo_logo{float:right;margin:0 20px 0 0;padding:0}
+  .coo_links{float:left;min-height:1px;min-width:100px;font-size:12px}
+  .coo_links img{height:50px;max-width:100px;margin-bottom:5px}
+  .cb_link_con{width:100%;margin-top:10px;margin-bottom:3px;text-align:center}
+  .cBG{position:fixed;top:0;left:0;height:100%;width:100%;background-color:rgba(0,0,0,.2);z-index:1400000000}
+  .cb_bottom .cBG,.cb_ecke .cBG,.cb_top .cBG{display:none}
+  .cb_center .cBG{display:block}
+  @media only screen and (min-width:1200px){
+      .cbMobOnly{display:none}.cb_ecke .text_banner{float:none}
+      .cb_bottom .text_banner,.cb_center .text_banner,.cb_top
+       .text_banner{float:left}.cb_ecke
+        .buttons_banner{padding-top:10px}.cb_ecke .button_nein{margin-left:24px}
+        .cb_bottom .button_nein,.cb_top .button_nein{margin-left:18px}.text_banner{margin:12px 0}
+        .cb_bottom .text_banner,.cb_top .text_banner{width:calc(100% - 515px)}
+        .cb_center .text_banner{width:calc(100% - 350px)}.buttons_banner{float:left;padding-bottom:1%}
+        .cb_bottom .buttons_banner,.cb_top .buttons_banner{margin-left:8px;width:390px}.cb_center .buttons_banner{width:240px;margin-left:8px}
+        .button_einverstanden{padding:.75em 1.25em;font-size:16px}.button_nein{font-size:13px}.cb_center .button_nein{margin-top:16px;padding:0}.cb_center .buttons_banner,.cb_center .coo_links{margin-top:10px}
+        .cb_bottom .schalter_con,.cb_top .schalter_con{margin-left:140px}.cb_center .schalter_con{margin-left:100px}}@media only screen and (max-width:1199px){
+          .coo_links{min-height:54px;width:100%}.cb_center .coo_links{position:absolute;top:5px;left:50px}.cb_link{position:absolute;top:20px;left:calc(50% - 53px);font-size:16px}
+          .cb_mobile_bottom .cookiebanner,.cb_mobile_top .cookiebanner{left:0!important;max-height:none;width:100%!important;padding-bottom:5px!important}
+          .cb_mobile_top .cookiebanner{top:0!important;bottom:auto!important}.cb_center .cookiebanner,.cb_mobile_center .cookiebanner{top:5%!important;left:5%!important;max-height:90%!important;width:90%!important}
+          .cb_mobile_bottom .cookiebanner{top:auto!important;bottom:0!important}.cb_center .cBanner{margin-top:48px}.coo_img_text{float:left;width:100%;padding:12px}.text_banner{width:100%;overflow-y:auto}
+          .cb_bottom .text_banner,.cb_top .text_banner{max-height:calc(100vh - 130px)}.cb_center .text_banner{max-height:calc(80vh - 270px)}
+          .buttons_banner{float:left;width:100%;padding-top:20px;padding-bottom:10px}.button_einverstanden{float:right;padding:calc(1em/3*2) .5em;font-size:18px}
+          .cb_bottom .button_einverstanden,.cb_top .button_einverstanden{margin-right:4px}@media only screen and (max-width:499px){
+              .cb_center .button_einverstanden{float:left!important}.cb_center .button_nein{margin-top:6px}}.button_nein{float:left;width:120px;margin:4px 0 12px;padding:0;font-size:14px}
+              .cb_bestaetigen .button_nein,.cb_janein .button_nein{display:block}.cb_okay .button_nein{display:none}.coo_logo{float:left;margin:0 0 0 10px;padding:0}
+              .coo_logo img{float:left;width:48px}.slSwitchConS{margin:10px 0}}</style><div id=cookiebanner_con class="cb_bottom cb_okay">
+                  <div id=cookiebanner class=cookiebanner style="background-color:rgba(93, 160, 197,0.8);"><h3 class=cb_link_con>
+                   Cookie Banner</a></h3><div class=cBanner><div class=coo_img_text><div class=coo_links><img alt="Logo von Smartlife - Online" 
+             
+                   src="{{logo.img.url}}"
+             
+                    ></a></div><div class=text_banner style="color:#000;font-size:14px">
+                      Korzystając z naszej strony, zgadzasz się na używanie plików cookie zgodnie z naszą Polityką Plików Cookie. Pliki cookie pomagają nam dostosować treści, dostarczać spersonalizowane reklamy i analizować ruch na stronie. Dzięki nim Twoje korzystanie z serwisu jest łatwiejsze i bardziej komfortowe.(<a href=pol.html class=link_banner target=_blank style="color:var(--bg-brand)">szczegóły</a>)</div></div>
+                      <div class=buttons_banner><button class="btn bg-brand" onclick=cookiesAktivieren(!0) ><b>Rozumiem</b></button></div></div></div><div id=co_wieder class="co_wieder co_wieder_right_bottom" style="font-size:10px;color:#5a6e8c;background-color:rgba(0,0,0,0.2)" onclick=trackingDeaktivieren()><div class=text_wieder>Cookie-Entscheidung widerrufen</div>
+                    </div><div id=cBG class=cBG></div></div><script>var slcbArt=4;var slcbPosi=2;var slcbDomain="novaslim";var slcbgtm=false;var slCookieNein=false;var slAuswahl=false;var slIsCookie=!1;function showcb(){document.getElementById("cookiebanner").style.display="block",0!==slcbArt&&1!==slcbArt&&2!==slcbArt&&3!==slcbArt||(document.getElementById("co_wieder").style.display="none"),1===slcbPosi&&(document.getElementById("cBG").style.display="block")}function hidcb(){document.getElementById("cookiebanner").style.display="none",0!==slcbArt&&1!==slcbArt&&2!==slcbArt&&3!==slcbArt||(document.getElementById("co_wieder").style.display="block"),1===slcbPosi&&(document.getElementById("cBG").style.display="none"),"function"==typeof cb_close_einstellungen&&cb_close_einstellungen()}function cookiesAktivieren(e){if(hidcb(),e||slAuswahl){let l=!1;switch(slAuswahl){case"checkbox":l=slAusgewaehlteCheckbox(e);break;case"switch":l=slAusgewaehlteSwitch(e)}l&&(l=l.split("~")),localStorage.sl_track_cookies="ja",localStorage.sl_track_auswahl=l,slCBStartTracking(l)}else slIsCookie=!1,localStorage.sl_track_cookies="nein",localStorage.removeItem("sl_track_auswahl")}function trackingDeaktivieren(){localStorage.sl_track_cookies="widerrufen",localStorage.removeItem("sl_track_auswahl"),location.reload()}function checkSLCookies(){let e="",l=[];"string"==typeof localStorage.sl_track_cookies&&(e=localStorage.sl_track_cookies),"string"==typeof localStorage.sl_track_auswahl&&""!==localStorage.sl_track_auswahl&&(l=localStorage.sl_track_auswahl),e&&("ja"===e?(hidcb(),slCBStartTracking(l)):"nein"===e&&(slIsCookie=!1,slCookieNein&&hidcb()))}function slCBStartTracking(e){if(slIsCookie=!0,"G"===slcbgtm.charAt(0)){var t,a,r,n,s,g="script",c="dataLayer";t=window,a=document,r=slcbgtm,t[c]=t[c]||[],t[c].push({"gtm.start":new Date().getTime(),event:"gtm.js"}),n=a.getElementsByTagName(g)[0],(s=a.createElement(g)).async=!0,s.src="https://www.googletagmanager.com/gtm.js?id="+r+("dataLayer"!=c?"&l="+c:""),n.parentNode.insertBefore(s,n)}else if("U"===slcbgtm.charAt(0)){let o=document.createElement("script");function i(){dataLayer.push(arguments)}o.src="https://www.googletagmanager.com/gtag/js?id="+slcbgtm,document.body.appendChild(o),window.dataLayer=window.dataLayer||[],i("js",new Date),i("config",slcbgtm)}"function"==typeof slSkript0&&("complete"==document.readyState?slSkript0():window.addEventListener("load",slSkript0))}checkSLCookies();</script>
+  
+  </body>
+</html>

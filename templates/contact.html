@@ -1,0 +1,84 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<style>
+
+  
+  
+  
+  
+  </style>
+
+
+<div class="added">
+
+  <div class="message-content"></div>
+  <button class="btn btn-outline-primary zamknij">Zamknij</button>
+
+</div>
+<div class="container bootstrap snippets bootdeys py-5">
+  <div class="row text-center">
+    <div class="col-sm-4">
+      <div class="contact-detail-box d-block">
+        <i class="fa fa-th fa-3x text-colored"></i>
+        <h4>Skontaktuj się z nami</h4>
+       <a href="tel:{{contact_data.phone_number2}}">{{contact_data.phone_number}}</a><br>
+        E: <a href="mailto:{{contact_data.email}}" class="text-muted">{{contact_data.email}}</a>
+      </div>
+    </div><!-- end col -->
+
+    <div class="col-sm-4">
+      <div class="contact-detail-box">
+        <i class="fa fa-map-marker fa-3x text-colored"></i>
+        <h4>Adres</h4>
+
+        <address>
+        {{contact_data.street}} {{contact_data.nr}}<br>
+        {{contact_data.postal_code}} {{contact_data.city}}<br>
+      </address>
+      </div>
+    </div><!-- end col -->
+
+    <div class="col-sm-4">
+      <div class="contact-detail-box">
+        <i class="bi bi-person-circle" style="font-size: 40px;"></i>
+        <h4>Media społecznościowe</h4>
+<p class="d-flex justify-content-center">
+  {% for social in social  %}
+  <a href="{{social.url}}" class="px-2"><img src="{{social.icon.url}}" alt="" width="30"></a>
+{% endfor %}
+</p>
+      </div>
+    </div><!-- end col -->
+
+  </div>
+  <!-- end row -->
+
+
+  <div class="row py-5">
+    <div class="col-sm-6">
+      <div class="contact-map d-flex h-100 align-items-center">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2547.3841194406837!2d19.06749231264111!3d50.32208449647888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716d1045c346e8b%3A0x373834d80178a05d!2sOgrodowa%204%2C%2041-250%20Czelad%C5%BA%2C%20Polska!5e0!3m2!1spl!2sde!4v1700126601435!5m2!1spl!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div><!-- end col -->
+
+    <!-- Contact form -->
+    <div class="col-sm-6">
+      
+<form  method="post" class="form" action="{% url 'contact-form' %}">
+  {% csrf_token %}
+  {{ form|crispy }}
+  <div class="d-grid gap-2 my-5">
+    <button class="btn btn-outline-primary" type="submit">Wyślij <i class="bi bi-send-fill px-2"></i></button>
+  </div>
+
+
+</form>
+
+    </div> <!-- end col -->
+
+  </div> <!-- end row -->
+      
+</div>
+
+
